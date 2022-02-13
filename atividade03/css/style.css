@@ -5,7 +5,7 @@
     
     flex-direction: row; 
     
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     
     /* flex-flow: row nowrap; - direction e wrap */ 
     
@@ -15,7 +15,7 @@
     align-items: stretch; /* alinhamento vertical */
     /* baseline - alinha com base no conteudo */
 
-    align-content: stretch; /* alinhamento vertical com quebra de linha*/
+    align-content: flex-start; /* alinhamento vertical com quebra de linha*/
 }
 
 .item {
@@ -23,5 +23,24 @@
     color: #fff;
     padding: 20px;
     margin: 5px;
-    width: 300px;    
+    height: 30px; 
+
+    /* flex-grow: 1;  largura */
+    /* flex-shrink: 1;  encolhe */
+    /* flex-basis: 300px;  largura inicial */
+
+    flex: 1 1 300px; /* grow shrink basis */
+}
+
+.artigo01 {
+    flex-shrink: 3; /* ocupa 3x o espaço dos outros */
+}
+.artigo02 {
+    
+}
+.artigo03 {
+    
+}
+.artigo04 {
+    
 }
