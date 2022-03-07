@@ -23,6 +23,7 @@ a:hover {
 
 /* header */
 header {
+    background-color: #fff;
     width: 100%;
     position: absolute;
     top: 0;
@@ -32,23 +33,18 @@ header {
     align-items: center; /* vertical */
     padding: 20px 50px;
 }
-
 header img {
     width: 200px;
 }
-
 header nav {
     display: flex;    
 }
-
 header li a {
     color: #191c03;
 }
-
 header li {
     margin: 0 15px;    
 }
-
 header li:first-child { margin-left: 0; }
 header li:last-child { margin-right: 0; }
 
@@ -56,4 +52,84 @@ header li:last-child { margin-right: 0; }
 @media(max-width: 700px) {
     header { flex-direction: column; }
     header img { margin-bottom: 15px; }
+}
+
+/* hero - imagem com texto no fundo */
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-size: cover;    
+    min-height: 100vh; /* equivalente a 100% */
+    color: #fff;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column; /* titulos sao renderizados em colunas */
+}
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+}
+.hero h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.hero .btn {
+    background-color: #fff;
+    border-radius: 4px;
+    color: #191c03;
+    padding: 20px 50px;
+    text-transform: uppercase;
+}
+@media(max-width: 700px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero h3 { font-size: 1.5rem; }
+}
+
+/* Conheça o Hotel */
+.conheca-o-hotel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 50px;   
+}
+.conheca-o-hotel h3 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    color: #191c03;
+}
+.conheca-o-hotel p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    color: #191c03;
+}
+.conheca-o-hotel hr {
+    width: 200px;
+    height: 2px;
+    background-color: #191c03;
+    margin-top: 70px;
+    text-align: center;
+    border: none;
+}
+.conheca-o-hotel .grid { 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.conheca-o-hotel .grid li {
+    height: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+.conheca-o-hotel .grid li.small {
+    flex-basis: 40%;
+}
+.conheca-o-hotel .grid li.large {
+    flex-basis: 60%;
+}
+@media (max-width: 700px) {
+    .conheca-o-hotel .grid li.small, .conheca-o-hotel .grid li.large { flex-basis: 100%; }
 }
